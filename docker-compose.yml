@@ -1,0 +1,9 @@
+services:
+  converter:
+    image: img-to-webp
+    build: .
+    volumes:
+      - ./input:/input
+      - ./output:/output
+      - ./convert.sh:/convert.sh
+    entrypoint: /convert.sh
