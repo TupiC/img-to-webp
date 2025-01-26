@@ -11,7 +11,7 @@ find /input -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -i
     BASENAME="${FILENAME%.*}"
 
     mkdir -p "$OUTPUT_PATH"
-    cwebp -q 80 "$IMAGE" -o "$OUTPUT_PATH/$BASENAME.webp"
+    cwebp -q 70 "$IMAGE" -o "$OUTPUT_PATH/$BASENAME.webp"
 
     if [ $? -eq 0 ]; then
         echo "Converted: $IMAGE -> $OUTPUT_PATH/$BASENAME.webp"
